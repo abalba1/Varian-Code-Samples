@@ -111,8 +111,8 @@ namespace VMS.TPS
         string filename = MakeFilenameValid(id);
 
         //comment out the file output you do not want
-        SaveTriangleMeshToPlyFile(structure.MeshGeometry, folder + "\\" + filename + ".ply");
-        //SaveTriangleMeshtoStlFile(structure.MeshGeometry, folder + "\\" + filename + ".stl");
+        //SaveTriangleMeshToPlyFile(structure.MeshGeometry, folder + "\\" + filename + ".ply");
+        SaveTriangleMeshtoStlFile(structure.MeshGeometry, folder + "\\" + filename + ".stl");
       }
     }
 
@@ -449,7 +449,7 @@ namespace VMS.TPS
       return s;
     }
 
-    //creates a face’s surface normal from the face’s three points
+    //creates a faceÂ’s surface normal from the faceÂ’s three points
     Vector3D CalculateSurfaceNormal(Point3D p1, Point3D p2, Point3D p3)
     {
       Vector3D v1 = new Vector3D(0, 0, 0);             // Vector 1 (x,y,z) & Vector 2 (x,y,z)
@@ -515,3 +515,4 @@ namespace VMS.TPS
 
   }
 }
+
